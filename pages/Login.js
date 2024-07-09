@@ -61,7 +61,7 @@ class LoginPage {
     await executeStep(this.test,this.inputSearch,"fill",`filling inputSearch  feild:${process.env.inputSearchFill}`,[process.env.inputSearchFill]);
     await executeStep(this.test,this.rolexSearchBtn,"click",`clicking on rolexSearchBtn button`);
     await executeStep(this.test,this.butItNow,"click",`clicking on But It Now button`);
-    await this.page.waitForTimeout(3000);
+    await this.page.waitForTimeout(5000);
     //await executeStep(this.test,this.shopOnEbayStore,"click",`clicking on shop on E-bay store`);
     //await this.page.waitForTimeout(2000);
    // await executeStep(this.test,this.heartSymbol,"toBeDiabled",`checking the heart symbol icon Btn is disabled or not`);

@@ -5,6 +5,8 @@ test('Login to E-bay application', async ({ page }) => {
     const loginPage = new LoginPage(page,test);
     await loginPage.launchApplication();
     await loginPage.sigInWithValidCredentials()
+
+
 });
    
 
