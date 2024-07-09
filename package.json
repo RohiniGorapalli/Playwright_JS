@@ -1,0 +1,22 @@
+{
+  "name": "playwright_e-baydemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "playwright": "^1.39.0",
+    "playwright-tesults-reporter": "^1.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.4",
+    "allure-commandline": "^2.24.1",
+    "allure-playwright": "^2.9.2",
+    "playwright-testmo-reporter": "^1.2.1"
+  }
+}

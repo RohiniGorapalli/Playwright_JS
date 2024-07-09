@@ -1,0 +1,45 @@
+<testsuites tests="1" failures="1" skipped="0" errors="0" assertions="0" time="19.967537000000476" timestamp="2023-10-13T10:23:29.512Z">
+  <testsuite name="E-bay.spec.js" hostname="chromium" tests="1" failures="1" skipped="0" errors="0" assertions="0" time="18.702" timestamp="2023-10-13T10:23:29.512Z" file="C:\Users\rohini.gorapalli\OneDrive - Feuji Software Solutions Pvt Ltd\Desktop\Playwright_E-bayDemo\tests\E-bay.spec.js">
+    <testcase name="Login to E-bay application" classname="E-bay.spec.js" assertions="0" time="18.702" file="C:\Users\rohini.gorapalli\OneDrive - Feuji Software Solutions Pvt Ltd\Desktop\Playwright_E-bayDemo\tests\E-bay.spec.js" line="4">
+      <failure message="E-bay.spec.js:4:1 Login to E-bay application">
+        <![CDATA[  [chromium] › E-bay.spec.js:4:1 › Login to E-bay application ──────────────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'master')
+
+       at ..\pages\Login.js:93
+
+      91 |   clickingOnSearchButton = async () => {
+      92 |     await executeStep(this.test,this.inputSearch,"click",`clicking on inputSearch button`);
+    > 93 |     await executeStep(this.test,this.inputSearch,"fill",`filling inputSearch  feild:${Data.master.inputSearchFill}`,[process.env.inputSearchFill]);
+         |                                                                                            ^
+      94 |   
+      95 |   };
+      96 |   // clickingOnAllCategories = async () => {
+
+        at LoginPage.clickingOnSearchButton (C:\Users\rohini.gorapalli\OneDrive - Feuji Software Solutions Pvt Ltd\Desktop\Playwright_E-bayDemo\pages\Login.js:93:92)
+        at LoginPage.sigInWithValidCredentials (C:\Users\rohini.gorapalli\OneDrive - Feuji Software Solutions Pvt Ltd\Desktop\Playwright_E-bayDemo\pages\Login.js:130:6)
+        at C:\Users\rohini.gorapalli\OneDrive - Feuji Software Solutions Pvt Ltd\Desktop\Playwright_E-bayDemo\tests\E-bay.spec.js:7:5
+]]>
+      </failure>
+      <properties>
+        <property name="step[passed]" value="Before Hooks"></property>
+        <property name="step[passed]" value="Navigating to https://www.ebay.com/"></property>
+        <property name="step[passed]" value="clicking on sig in button"></property>
+        <property name="step[passed]" value="page.waitForTimeout"></property>
+        <property name="step[passed]" value="filling username into input feild:gorapallirohini23@gmail.com"></property>
+        <property name="step[passed]" value="clicking on continue button"></property>
+        <property name="step[passed]" value="page.waitForTimeout"></property>
+        <property name="step[passed]" value="filling password into input feild:Teams@2323"></property>
+        <property name="step[passed]" value="clicking on signIn button"></property>
+        <property name="step[passed]" value="page.waitForTimeout"></property>
+        <property name="step[passed]" value="hovering on fashion option"></property>
+        <property name="step[passed]" value="page.waitForTimeout"></property>
+        <property name="step[passed]" value="clicking on watches option"></property>
+        <property name="step[passed]" value="page.waitForTimeout"></property>
+        <property name="step[passed]" value="clicking on inputSearch button"></property>
+        <property name="step[failure]" value="Cannot read properties of undefined (reading &apos;master&apos;)"></property>
+        <property name="step[passed]" value="After Hooks"></property>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>
