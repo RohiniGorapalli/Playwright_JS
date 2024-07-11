@@ -10,29 +10,9 @@ class LoginPage {
     this.continueBtn = page.locator("//button[@id='signin-continue-btn']");
     this.inputPassword = page.locator("//input[@id='pass']");
     this.signInBtn = page.locator("//button[@id='sgnBt']");
-    this.fashionBtn = page.locator("(//a[text()='Fashion'])[2]");
-    this.watchesOption = page.locator("//a[text()='Watches']");
-    this.inputSearch = page.locator("//input[@id='gh-ac']");
-    this.rolexSearchBtn = page.locator("//td[@class='gh-td gh-sch-btn']");
-    this.butItNow = page.locator("(//li[@class='fake-tabs__item btn'])[2]");
-    this.heartSymbol = page.locator("//span[@class='follow-heart-wrapper heartIcon ']");
-    this.shopOnEbayStore = page.locator("//div[@class='pd-cta-icon']");
-    //this.checkAlert = page.locator("//div[@id='ebayin-sunset']");
+    this.skipForNowBtn = page.locator("//a[@id='passkeys-cancel-btn']");
   }
-  // async login(username,password){
-  //     await expect(this.inputPassword).toBeVisible();
-  //     await this.inputPassword.click();
-  //     await this.signIn.click();
-  //     await this.page.waitForTimeout(2000);
-  //     await this.inputUsername.type(username);
-  //     await this.page.waitForTimeout(2000);
-  //     await this.continueBtn.click();
-  //     await this.page.waitForTimeout(2000);
-  //     await this.inputPassword.fill(password);
-  //     await this.page.waitForTimeout(2000);
-  //     await this.signInBtn.click();
-  //     await this.page.waitForTimeout(2000);
-  // }
+ // writing POM model
   launchApplication = async () => {
     await executeStep(this.test,await this.page,"navigate",`Navigating to ${process.env.url}`,[process.env.url]);
   };
@@ -51,35 +31,24 @@ class LoginPage {
   clickingOnsignInButton = async () => {
     await executeStep(this.test,this.signInBtn,"click",`clicking on signIn button`);
   };
-  clickingOnFashionButton = async () => {
-    await executeStep(this.test,this.fashionBtn,"hover",`hovering on fashion option`);
-    await this.page.waitForTimeout(2000);
-    await executeStep(this.test,this.watchesOption,"click",`clicking on watches option`);
-  };
-  clickingOnSearchButton = async () => {
-    await executeStep(this.test,this.inputSearch,"click",`clicking on inputSearch button`);
-    await executeStep(this.test,this.inputSearch,"fill",`filling inputSearch  feild:${process.env.inputSearchFill}`,[process.env.inputSearchFill]);
-    await executeStep(this.test,this.rolexSearchBtn,"click",`clicking on rolexSearchBtn button`);
-    await executeStep(this.test,this.butItNow,"click",`clicking on But It Now button`);
-    await this.page.waitForTimeout(5000);
-    //await executeStep(this.test,this.shopOnEbayStore,"click",`clicking on shop on E-bay store`);
-    //await this.page.waitForTimeout(2000);
-   // await executeStep(this.test,this.heartSymbol,"toBeDiabled",`checking the heart symbol icon Btn is disabled or not`);
-   // await expect(this.checkAlert).toBeVisible();
-  };
+  clickingOnSkipForNowButton = async () => {
+    await executeStep(this.test,this.skipForNowBtn,"click",`clicking on skipfornoe button`);
+  }
+ 
+ // calling in one function of full test case
   sigInWithValidCredentials = async () => {
     await this.clickingOnSiginButton();
-    await this.page.waitForTimeout(2000);
+    await this.page.waitForTimeout(3000);
     await this.fillingUsername();
+    await this.page.waitForTimeout(3000);
     await this.clickingOnContinueButton();
-    await this.page.waitForTimeout(2000);
+    await this.page.waitForTimeout(3000);
     await this.fillingPass();
     await this.clickingOnsignInButton();
     await this.page.waitForTimeout(4000);
-    await this.clickingOnFashionButton();
-    await this.page.waitForTimeout(2000);
-    await this.clickingOnSearchButton();
-    await this.page.waitForTimeout(2000);
+    await this.clickingOnSkipForNowButton();
+    await this.page.waitForTimeout(6000);
+    
   
   };
 }
